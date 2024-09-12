@@ -21,11 +21,11 @@ public class Main {
         short morePrevious = 27897;
         byte sixtySeven = 67;
 
-        byte lP = 23;
-        byte aS = 27;
-        byte eA = 30;
+        byte ludmilaPavlovna = 23;
+        byte annaSergeevna = 27;
+        byte ekaterinaAndreevna = 30;
         short paper = 480;
-        System.out.println("На каждого ученика рассчитано " + (paper / (lP + aS + eA)) + " листов бумаги");
+        System.out.println("На каждого ученика рассчитано " + (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna)) + " листов бумаги");
 
         byte bottles = 16;
         byte perWhat = 2;
