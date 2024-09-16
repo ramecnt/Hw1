@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        String os = "iOS";
-        boolean clientOS = os == "iOS";
+        String personOS = "iOS";
+        boolean clientOS = personOS == "iOS";
         if (clientOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
