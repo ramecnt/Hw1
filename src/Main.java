@@ -3,6 +3,7 @@ public class Main {
         int total = 0;
         short i = 0;
         while (total < 2459000) {
+            total *= 1.01;
             total += 15000;
             i += 1;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
@@ -66,7 +67,7 @@ public class Main {
         int yearBefore = year - 200;
         int yearAfter = year + 100;
 
-        for (year = yearBefore; year < yearAfter; year ++) {
+        for (year = yearBefore; year <= yearAfter; year ++) {
             if (year % 79 == 0){
                 System.out.println(year);
             }
