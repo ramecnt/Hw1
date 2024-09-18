@@ -29,8 +29,9 @@ public class Main {
         }
 
         int total2 = 15000;
+        int goalSum = 12000000;
         i = 1;
-        while (total2 < 12000000) {
+        while (total2 < goalSum) {
             total2 *= 1.07;
             System.out.println("Месяц " + i + ", на счете " + total2);
             i += 1;
@@ -38,7 +39,7 @@ public class Main {
 
         total2 = 15000;
         i = 1;
-        while (total2 < 12000000) {
+        while (total2 < goalSum) {
             total2 *= 1.07;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + ", на счете " + total2);
