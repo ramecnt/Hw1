@@ -1,73 +1,84 @@
 public class Main {
     public static void main(String[] args) {
-        byte b = 10;
-        short s = 100;
-        int i = 1000;
-        long l = 10000L;
-        float f = 0.1f;
-        double d = 1;
-        System.out.println("Значение переменной b с типом byte равно " + b);
-        System.out.println("Значение переменной s с типом short равно " + s);
-        System.out.println("Значение переменной i с типом int равно " + i);
-        System.out.println("Значение переменной l с типом long равно " + l);
-        System.out.println("Значение переменной f с типом float равно " + f);
-        System.out.println("Значение переменной d с типом double равно " + d);
+        byte age = 17;
 
-        float twentySeven = 27.12f;
-        long aLot = 987678965549L;
-        float two = 2.786f;
-        short fiveHundred = 569;
-        short minus = -159;
-        short morePrevious = 27897;
-        byte sixtySeven = 67;
+        System.out.println("Если возраст человека равен " + age + ", то");
+        if (age >= 18) {
+            System.out.println("он совершеннолетний");
+        } else {
+            System.out.println("он не достиг совершеннолетия, нужно немного подождать");
+        }
 
-        byte ludmilaPavlovna = 23;
-        byte annaSergeevna = 27;
-        byte ekaterinaAndreevna = 30;
-        short paper = 480;
-        System.out.println("На каждого ученика рассчитано " + (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna)) + " листов бумаги");
 
-        byte bottles = 16;
-        byte perWhat = 2;
-        byte perMinute = (byte) (bottles / perWhat);
-        System.out.println("За 20 минут машина произвела " + (perMinute * 20) + " штук бутылок");
-        System.out.println("За сутки машина произвела " + (perMinute * 24 * 60) + " штук бутылок");
-        System.out.println("За 3 дня машина произвела " + (perMinute * 24 * 60 * 3) + " штук бутылок");
-        System.out.println("За месяц минут машина произвела " + (perMinute * 24 * 60 * 30) + " штук бутылок");
+        byte coldWeather = -10;
 
-        byte total = 120;
-        byte whitePer = 2;
-        byte brownPer = 4;
-        byte perClass = (byte) (whitePer + brownPer);
-        System.out.println("В школе, где " + (total / perClass) + " классов, нужно " + ((total / perClass) * whitePer) +
-                " банок белой краски и " + ((total / perClass) * brownPer) + " банок коричневой краски");
+        System.out.println("На улице " + coldWeather + " градусов");
+        if (coldWeather < 5) {
+            System.out.println("На улице холодно, нужно надеть шапку");
+        } else {
+            System.out.println("Сегодня тепло, можно идти без шапки");
+        }
 
-        byte bananaAmount = 5;
-        byte bananaWeight = 80;
-        short milkAmount = 200;
-        byte milkWeight = 105;
-        byte iceCreamAmount = 2;
-        byte iceCreamWeight = 100;
-        byte eggAmount = 4;
-        byte eggWeight = 70;
-        short resGrams = (short) (bananaAmount * bananaWeight + milkAmount * milkWeight + iceCreamAmount * iceCreamWeight + eggAmount * eggWeight);
-        float resKg = resGrams / (float) 1000;
-        System.out.println("Gram - " + resGrams);
-        System.out.println("Kg - " + resKg);
 
-        short min = 250;
-        short max = 500;
-        short neededKg = 7;
-        short neededGrams = (short) (neededKg * 1000);
-        System.out.println("Если худеть на " + min + " грамм - " + (neededGrams / min));
-        System.out.println("Если худеть на " + max + " грамм - " + (neededGrams / max));
-        System.out.println("В среднем " + (((neededGrams / min) + (neededGrams / max)) / 2));
+        byte highSpeed = 120;
 
-        int mashaSalary = 67760;
-        int denisSalary = 83690;
-        int cristinaSalary = 76230;
-        System.out.println("Маша теперь получает " + (int) (mashaSalary * 1.1) + " рублей. Годовой доход вырос на " + (int) (mashaSalary * 0.1 * 12) + " рублей");
-        System.out.println("Денис теперь получает " + (int) (denisSalary * 1.1) + " рублей. Годовой доход вырос на " + (int) (denisSalary * 0.1 * 12) + " рублей");
-        System.out.println("Кристина теперь получает " + (int) (cristinaSalary * 1.1) + " рублей. Годовой доход вырос на " + (int) (cristinaSalary * 0.1 * 12) + " рублей");
+        System.out.println("Если скорость " + highSpeed + ", то");
+        if (highSpeed > 60) {
+            System.out.println("придется заплатить штраф");
+        } else {
+            System.out.println("можно ездить спокойно");
+        }
+
+
+        byte age2 = 1;
+
+        System.out.println("Если человеку " + age2);
+        if (age2 < 2) {
+            System.out.println("то ему никуда не нужно");
+        } else if (age2 >= 2 && age2 <= 6) {
+            System.out.println("то ему нужно ходить в детский сад");
+        } else if (age2 >= 7 && age2 <= 17) {
+            System.out.println("то ему нужно ходить в школу");
+        } else if (age2 >= 18 && age2 <= 24) {
+            System.out.println("то его место в университете");
+        } else if (age2 > 24) {
+            System.out.println("то ему пора ходить на работу");
+        }
+
+
+        byte age3 = 13;
+
+        System.out.println("Если человеку " + age3);
+        if (age3 <= 5) {
+            System.out.println("то он не может кататься на аттракционе");
+        } else if (age3 > 5 && age3 <= 14) {
+            System.out.println("то он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.");
+        } else {
+            System.out.println("то он может кататься без сопровождения взрослого.");
+        }
+
+        byte amount = 102;
+        byte sit = 60;
+        byte people = 80;
+
+        if (people >= amount) {
+            System.out.println("В вагоне больше нет мест");
+        } else if (people >= sit) {
+            System.out.println("В вагоне нет сидячих мест, но есть стоячие");
+        } else {
+            System.out.println("В вагоне есть как стоячие, так и сидячие места");
+        }
+
+        int one = 1;
+        int two = 2;
+        int three = 3;
+
+        if (one >= two && one >= three) {
+            System.out.println("one самое большое число");
+        } else if (two >= three && two >= one) {
+            System.out.println("two самое большое число");
+        } else if (three >= one && three >= two) {
+            System.out.println("three самое большое число");
+        }
     }
 }
