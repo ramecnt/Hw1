@@ -1,77 +1,49 @@
 public class Main {
     public static void main(String[] args) {
-        int total = 0;
-        short i = 0;
-        while (total < 2459000) {
-            total *= 1.01;
-            total += 15000;
-            i += 1;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
-        }
+        int[] mas = new int[3];
+        mas[0] = 1;
+        mas[1] = 2;
+        mas[2] = 3;
+        double[] mas2 = {1.57, 7.654, 9.986};
+        int[] mas3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        i = 1;
-        while (i != 11) {
-            System.out.print(i + " ");
-            i += 1;
+        System.out.print(mas[0]);
+        for (int i = 1; i < mas.length; i++) {
+            System.out.print(", " + mas[i]);
         }
         System.out.println();
-        for (i = 10; i > 0; i--) {
-            System.out.print(i + " ");
+        System.out.print(mas2[0]);
+        for (int i = 1; i < mas2.length; i++) {
+            System.out.print(", " + mas2[i]);
         }
-
-        int population = 12000000;
-        double birthRate = population * 17 / 1000;
-        double deathRate = population *  8 / 1000;
-        for (i = 0; i < 11; i++) {
-            population += birthRate;
-            population -= deathRate;
-            System.out.println("Год " + (i + 1) + ", численность населения составляет " + population);
+        System.out.println();
+        System.out.print(mas3[0]);
+        for (int i = 1; i < mas3.length; i++) {
+            System.out.print(", " + mas3[i]);
         }
+        System.out.println();
 
-        int total2 = 15000;
-        int goalSum = 12000000;
-        i = 1;
-        while (total2 < goalSum) {
-            total2 *= 1.07;
-            System.out.println("Месяц " + i + ", на счете " + total2);
-            i += 1;
+        System.out.print(mas[mas.length - 1]);
+        for (int i = mas.length - 2; i > -1; i--) {
+            System.out.print(", " + mas[i]);
         }
+        System.out.println();
+        System.out.print(mas2[mas2.length - 1]);
+        for (int i = mas2.length - 2; i > -1; i--){
+            System.out.print(", " + mas2[i]);
+        }
+        System.out.println();
+        System.out.print(mas3[mas3.length - 1]);
+        for (int i = mas3.length - 2; i > -1; i--) {
+            System.out.print(", " + mas3[i]);
+        }
+        System.out.println();
 
-        total2 = 15000;
-        i = 1;
-        while (total2 < goalSum) {
-            total2 *= 1.07;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", на счете " + total2);
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] % 2 == 1) {
+                mas[i] += 1;
             }
-            i += 1;
-        }
-
-        total2 = 15000;
-        i = 1;
-        while (i <= 9 * 12) {
-            total2 *= 1.07;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", на счете " + total2);
-            }
-            i += 1;
-        }
-
-        int friday = 3;
-
-        do {
-            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-            friday += 7;
-        } while (friday <= 31);
-
-        int year = 2024;
-        int yearBefore = year - 200;
-        int yearAfter = year + 100;
-
-        for (year = yearBefore; year <= yearAfter; year ++) {
-            if (year % 79 == 0){
-                System.out.println(year);
-            }
+            System.out.print(mas[i] + " ");
         }
     }
 }
