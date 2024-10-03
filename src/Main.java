@@ -1,19 +1,32 @@
 public class Main {
     public static void main(String[] args) {
-        Gryffindor harryPotter = new Gryffindor("Harry Potter", 8, 9, 10, 5, 7, 6, 7, 6, 8, 5, 4, 5, 4, 3, 2);
-        Gryffindor hermioneGranger = new Gryffindor("Hermione Granger", 9, 10, 8, 6, 8, 9, 10, 9, 9, 7, 4, 5, 3, 4, 3);
-        Gryffindor ronWeasley = new Gryffindor("Ron Weasley", 7, 8, 9, 5, 8, 6, 6, 5, 7, 4, 3, 5, 4, 3, 1);
+        Car car = new Car();
+        Car car2 = new Car();
+        car.setModelName("car1");
+        car2.setModelName("car2");
+        car.setWheelsCount(4);
+        car2.setWheelsCount(4);
 
-        Hufflepuff zachariasSmith = new Hufflepuff("Zacharias Smith", 5, 6, 6, 8, 9, 8, 6, 5, 5, 6, 3, 4, 4, 3, 2);
-        Hufflepuff cedricDiggory = new Hufflepuff("Cedric Diggory", 8, 9, 10, 7, 8, 7, 8, 8, 6, 7, 3, 5, 4, 4, 2);
-        Hufflepuff justinFinchFletchley = new Hufflepuff("Justin Finch Fletchley", 6, 7, 5, 9, 7, 8, 5, 4, 4, 6, 4, 3, 3, 2, 1);
+        Truck truck = new Truck();
+        Truck truck2 = new Truck();
+        truck.setModelName("truck1");
+        truck2.setModelName("truck2");
+        truck.setWheelsCount(4);
+        truck2.setWheelsCount(4);
 
-        Ravenclaw zhouChang = new Ravenclaw("Zhou Chang", 7, 8, 6, 5, 6, 5, 9, 8, 8, 9, 4, 4, 3, 5, 3);
-        Ravenclaw padmaPatil = new Ravenclaw("Padma Patil", 7, 6, 5, 6, 7, 6, 8, 8, 7, 7, 4, 4, 3, 4, 2);
-        Ravenclaw marcusBelby = new Ravenclaw("Marcus Belby", 6, 7, 5, 5, 6, 5, 9, 8, 8, 8, 3, 4, 4, 4, 3);
+        Bicycle bicycle = new Bicycle();
+        Bicycle bicycle2 = new Bicycle();
+        bicycle.setModelName("bicycle1");
+        bicycle2.setModelName("bicycle2");
+        bicycle.setWheelsCount(4);
+        bicycle2.setWheelsCount(4);
 
-        Slytherin dracoMalfoy = new Slytherin("Draco Malfoy", 2, 3, 4, 4, 3, 4, 6, 5, 5, 6, 9, 7, 8, 7, 9);
-        Slytherin grahamMontague = new Slytherin("Graham Montague", 2, 3, 3, 5, 4, 4, 5, 5, 4, 4, 8, 6, 7, 7, 8);
-        Slytherin gregoryGoyle = new Slytherin("Gregory Goyle", 1, 2, 3, 4, 3, 3, 4, 3, 2, 2, 7, 5, 6, 5, 6);
+        car.check();
+        car2.check();
+        truck.check();
+        truck2.check();
+        bicycle.check();
+        bicycle2.check();
+
     }
 }
