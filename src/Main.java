@@ -1,32 +1,24 @@
+import exceptions.WrongLoginException;
+import exceptions.WrongPasswordException;
+
 public class Main {
+    public static void registration(String login, String password, String confirmPassword) {
+        try {
+            boolean valid = login.matches("\\w+");
+            if (!valid || login.length() > 20) {
+                throw new WrongLoginException("Логин содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов");
+            }
+            boolean valid2 = password.matches("\\w+");
+            boolean valid3 = confirmPassword.equals(password);
+            if (!valid2 || password.length() > 20 || !valid3) {
+                throw new WrongLoginException("Пароль содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов, пароли должны совпадать");
+            }
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
-        Car car = new Car();
-        Car car2 = new Car();
-        car.setModelName("car1");
-        car2.setModelName("car2");
-        car.setWheelsCount(4);
-        car2.setWheelsCount(4);
-
-        Truck truck = new Truck();
-        Truck truck2 = new Truck();
-        truck.setModelName("truck1");
-        truck2.setModelName("truck2");
-        truck.setWheelsCount(4);
-        truck2.setWheelsCount(4);
-
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
-        bicycle.setModelName("bicycle1");
-        bicycle2.setModelName("bicycle2");
-        bicycle.setWheelsCount(4);
-        bicycle2.setWheelsCount(4);
-
-        car.check();
-        car2.check();
-        truck.check();
-        truck2.check();
-        bicycle.check();
-        bicycle2.check();
-
+        registration("lol1_", "lol", "lol");
     }
 }
