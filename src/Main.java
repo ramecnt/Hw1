@@ -1,24 +1,39 @@
 import exceptions.WrongLoginException;
 import exceptions.WrongPasswordException;
 
+import java.util.Objects;
+
 public class Main {
+    public static boolean check(String word, String input) {
+        if (word.matches("\\w+") && word.length() <= 20) {
+            return true;
+        } else if (Objects.equals(input, "логин")) {
+            throw new WrongLoginException("Логин содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов");
+        } else {
+            throw new WrongPasswordException("Пароль содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов");
+        }
+    }
+
     public static void registration(String login, String password, String confirmPassword) {
+        boolean valid = false;
+        boolean valid2 = false;
+        boolean valid3 = false;
         try {
-            boolean valid = login.matches("\\w+");
-            if (!valid || login.length() > 20) {
-                throw new WrongLoginException("Логин содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов");
-            }
-            boolean valid2 = password.matches("\\w+");
-            boolean valid3 = confirmPassword.equals(password);
-            if (!valid2 || password.length() > 20 || !valid3) {
-                throw new WrongLoginException("Пароль содержит в себе только латинские буквы, цифры и знак подчеркивания, длина не должна превышать 20 символов, пароли должны совпадать");
-            }
+            valid = check(login, "логин");
+            valid2 = check(password, "пароль");
+            valid3 = confirmPassword.equals(password);
         } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println(e.getMessage());
+        } finally {
+            if (valid && valid2 && valid3) {
+                System.out.println("Все корректно");
+            } else {
+                System.out.println("Попробуйте снова");
+            }
         }
     }
 
     public static void main(String[] args) {
-        registration("lol1_", "lol", "lol");
+        registration("lol1_", "lal", "lol");
     }
 }
