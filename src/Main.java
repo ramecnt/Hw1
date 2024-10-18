@@ -18,22 +18,21 @@ public class Main {
         boolean valid = false;
         boolean valid2 = false;
         boolean valid3 = false;
-        try {
-            valid = check(login, "логин");
-            valid2 = check(password, "пароль");
-            valid3 = confirmPassword.equals(password);
-        } catch (WrongLoginException | WrongPasswordException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            if (valid && valid2 && valid3) {
-                System.out.println("Все корректно");
-            } else {
-                System.out.println("Попробуйте снова");
-            }
+        valid = check(login, "логин");
+        valid2 = check(password, "пароль");
+        valid3 = confirmPassword.equals(password);
+        if (valid && valid2 && valid3) {
+            System.out.println("Все корректно");
+        } else {
+            System.out.println("Пароли не совпадают");
         }
     }
 
     public static void main(String[] args) {
-        registration("lol1_", "lal", "lol");
+        try {
+            registration("lol1_", "lal", "lol");
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
